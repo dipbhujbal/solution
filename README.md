@@ -66,7 +66,7 @@ ad8a7be3f02e   infracloudio/csvserver:latest   "/csvserver/csvserver"   12 secon
 
 $ docker exec -it ad8a bash
 
-#### Execute below command inside the container to see the port on which application is listening o
+#### Execute below command inside the container to see the port on which application is listening 
 
 [root@ad8a7be3f02e csvserver]# netstat -nlp|grep LISTEN
 
@@ -133,7 +133,7 @@ CONTAINER ID   IMAGE                           COMMAND                  CREATED 
 b511f51f2734   infracloudio/csvserver:latest   "/csvserver/csvserver"   4 minutes ago   Up 10 seconds   0.0.0.0:9393->9300/tcp   root_csv_server_1
 
 
-#### Save the solution on Github
+
 
 
 #### Save the solution of PART II 
@@ -189,5 +189,5 @@ CONTAINER ID   IMAGE                           COMMAND                  CREATED 
 ##### Make sure that Prometheus is accessible on port 9090 on the host.
 
 ##### Type "csvserver_records" in the query box of Prometheus. Click on Execute and then switch to the Graph tab. on the host.
-It will show straight line graph with value 10
+It will show straight line graph with the values generated
 
