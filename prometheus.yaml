@@ -1,0 +1,6 @@
+scrape_configs:
+ - job_name: 'promatheus'
+   scrape_interval: "5m"
+   static_configs:
+   - targets: ["192.168.0.28:9393"]
+   metrics_path: "/metrics"

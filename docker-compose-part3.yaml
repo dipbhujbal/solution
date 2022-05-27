@@ -1,0 +1,21 @@
+version : "3"
+services :
+   prometheus:
+       image: 'prom/prometheus:v2.22.0'
+       user: root
+       volumes :
+            - "/root/prometheus.yaml:/etc/prometheus/prometheus.yml"
+       ports:
+            - "9090:9090"
+       command:
+            - '--config.file=/etc/prometheus/prometheus.yml'
+       depends_on:
+            -  "csv_server"
+   csv_server :
+        image: 'infracloudio/csvserver:latest'
+        volumes :
+           - "/root/inputFile.csv:/csvserver/inputdata"
+        ports:
+           - "9393:9300"
+        environment:
+           - "CSVSERVER_BORDER=Orange"
